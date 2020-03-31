@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-
+import Post from "./Post";
+import "./index.css";
 class UserDetails extends Component {
   constructor() {
     super();
@@ -19,7 +20,12 @@ class UserDetails extends Component {
       });
   }
   render() {
-    return <div>Testing</div>;
+    const { userDetails } = this.state;
+    return (
+      <div>
+        <Post user={userDetails} />
+      </div>
+    );
   }
 }
 
